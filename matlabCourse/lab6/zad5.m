@@ -1,7 +1,10 @@
 X = rand(3,3);
 X = round(X*256);
+XX = mat2gray(X);
+[Xind,map] = gray2ind(XX,256);
 
-[Lw, Lk, N] = size(X);
-XX(Lw, Lk, N) = uint8(0);
-XX(:, :, 1) = X(:, :, 1);
-imshow(XX);
+Xrgb = ind2rgb(Xind,map);
+
+figure, imshow(XX);
+figure, imshow(Xind,map);
+figure, imshow(Xrgb);

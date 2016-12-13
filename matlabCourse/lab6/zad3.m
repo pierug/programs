@@ -25,6 +25,5 @@ figure, imshow(X1, map);
 clear X1;
 clear map;
 
-[X1, map] = rgb2ind(Kr, pink[X1, map] = rgb2ind(Kr, copper);
-figure, imshow(X1, map););
+[X1, map] = rgb2ind(Kr, pink);
 figure, imshow(X1, map);
