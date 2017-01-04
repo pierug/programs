@@ -1,7 +1,0 @@
-X = rand(300,300);
-X = round(X*255);
-[XX, map] = gray2ind(X);
-
-
-figure 1, imshow(XX,map);
-figure 2, imshow(X);

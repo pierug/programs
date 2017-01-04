@@ -1,0 +1,12 @@
+BW1 = imread('kontur.bmp');
+BW2 = bwmorph(BW1, 'remove');
+BW3 = bwmorph(BW1, 'thin');
+BW4 = bwmorph(BW1, 'shrink');
+subplot(2,2,1);
+imshow(BW1);
+subplot(2,2,2);
+imshow(BW2);
+subplot(2,2,3);
+imshow(BW3);
+subplot(2,2,4);
+imshow(BW4);
