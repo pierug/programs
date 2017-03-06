@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-03-04, 23:28:52
+    Author     : pieru
+*/
+
+body {    
+    background-image: url(../images/tlo.jpg); 
+    background-attachment: fixed; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    color: white;
+    font: 16px Verdana, Geneva, sans-serif;
+
+}
+#navigationBar{
+
+    right: 0;
+    top: 0;
+    left: 0;
+}
+#navigationBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#000000;
+}
+
+#navigationBar li {
+    float: left;
+}
+
+#navigationBar li a {
+    font-size: 20px;
+    display:block;
+    color: white;
+    text-align: center;
+    padding: 30px 30px;
+    text-decoration: none;
+}
+
+#navigationBar li a:hover {
+    background-color: #111;
+}
+
+#footer {
+    clear: both;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 4px;
+    background-color: #000000;
+    text-align: right;
+    font-size: 10px;
+}

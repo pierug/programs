@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Adam Piasecki</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/aboutMe.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="viewportchecker.js"></script>
+        <script>
+            $(document).ready(function () {
+                var r = $("div");
+                r.css({"opacity": "0.0"});
+                r.animate({opacity: 0.0}, 1000);
+                r.animate({opacity: 0.9}, 3000);
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="navigationBar"> 
+                <ul>
+                    <li><a href="index.html">ABOUT ME</a></li>
+                    <li><a href="CV.html">CV</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </header>
+          
+        <div id="container">
+            <div id="text">
+                <h2>
+                    ADAM PIASECKI
+                    <br>
+                    PROGRAMER / BIOMEDICAL ENGEENER
+                </h2>
+                <p>
+                    My name is Adam Piasecki and I am a graduate student of 
+                    Biomedical Engineering at the Lublin University of
+                    Technology. I decided to not only dedicate myself to Biomedical 
+                    Engineering but to study Computer Science and this is a field which in 
+                    I specialize.
+                </p>
+                <p>
+                    My main hobby, which is programming, gives me a lot of fun. I took a part in some profit 
+                    and nonprofit projects based on C/C++ language. I am also expanding my programing 
+                    skills, by learning and make projects in different languages like java and Matlab.
+                </p>
+                <p>
+                    If you are interested about my experiences and other hobbies, please come 
+                    over to my CV and portfolio pages. Also, use my contact details in contact 
+                    page, if you have any questions.           
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            2017 &copy; Adam Piasecki. All rights reserved.
+        </div>
+    </body>
+</html>
