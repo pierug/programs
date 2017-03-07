@@ -33,9 +33,13 @@ and open the template in the editor.
     text-align: left;
 }
 *.timeBox{
-    vertical-align:top;
+    clear: both;
+    display:block;   
+    float: left;
     width: 40%;
 }
 *.expBox{
+    display:block;
+    float: right;
     width: 60%;
 }

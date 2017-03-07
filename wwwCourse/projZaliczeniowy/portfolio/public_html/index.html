@@ -12,28 +12,49 @@ and open the template in the editor.
         <link rel="stylesheet" href="./css/aboutMe.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/slimbox2.js"></script>
+        <script type="text/javascript" src="./js/preloadImages.js"></script>
+
         <script src="viewportchecker.js"></script>
         <script>
+
             $(document).ready(function () {
-                var r = $("div");
-                r.css({"opacity": "0.0"});
-                r.animate({opacity: 0.0}, 1000);
-                r.animate({opacity: 0.9}, 3000);
+                    var r = $("div");
+                    r.css({"opacity": "0.0"});
+                    r.animate({opacity: 0.0}, 1000);
+                    r.animate({opacity: 0.9}, 1000);
             });
+
+            function changeContentAndHeaderColor(pageName) {
+                $(document).ready(function () {
+                    changeContent(pageName);
+                });
+            }
+            function changeContent(pageName) {
+                $(document).ready(function () {
+                    $("#container").fadeOut(600, function () {
+                        $("#container").load(pageName, function () {
+                            $("#container").fadeIn(600);
+                        });
+                    });
+                });
+            }
+
         </script>
     </head>
     <body>
         <header>
             <div id="navigationBar"> 
                 <ul>
-                    <li><a href="index.html">ABOUT ME</a></li>
-                    <li><a href="CV.html">CV</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="javascript:void(0)" id="aboutMe" onclick='changeContentAndHeaderColor("./index.html")'>ABOUT ME</a></li>
+                    <li><a href="javascript:void(0)" id="CV" onclick='changeContentAndHeaderColor("./CV.html")'>CV</a></li>
+                    <li><a href="javascript:void(0)" id="portfolio" onclick='changeContentAndHeaderColor("./portfolio.html")'>PORTFOLIO</a></li>
+                    <li><a href="javascript:void(0)" id="contact" onclick='changeContentAndHeaderColor("./contact.html")'>CONTACT</a></li>
                 </ul>
             </div>
         </header>
-          
+
         <div id="container">
             <div id="text">
                 <h2>
