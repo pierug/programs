@@ -30,7 +30,7 @@
                 <h2>Przykładowy formularz HTML</h2>
             </div>
             <div>
-                <form action="mailto:adam.piasecki@pollub.edu.pl" method="post">
+                <form action="mailto:adam.piasecki@pollub.edu.pl" method="post" autocomplete="on">
                     <!-- Przykładowe typy znacznika input -->
                     <table border="1">
                         <caption>Popularność języków programowania</caption>
@@ -67,7 +67,14 @@
                     <input type="radio" name="eurocard" value="e" /> eurocard 
                     <input type="radio" name="visa" value="v" /> visa 
                     <input type="radio" name="przelew" value="p" /> przelew bankowy<br />
-
+                    <h2>Nowe:</h2> <br />
+                    Email 
+                    <input type="email" name="email" required="required"/> <br />
+                    Color
+                    <input type="color" name="col" value="#ffffff" /> <br /> 
+                    Data
+                    <input type="date" name="bday" required="required"/> <br />
+                    
                     <input type="submit" value="Wyślij" />
                     <input type="reset" value="Anuluj" />
 

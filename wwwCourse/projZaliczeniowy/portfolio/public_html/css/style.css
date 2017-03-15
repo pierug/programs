@@ -19,6 +19,8 @@ body {
     overflow-y: scroll;
 }
 #container{
+    width: 1300px;
+
     z-index: -1;
 }
 #navigationBar{

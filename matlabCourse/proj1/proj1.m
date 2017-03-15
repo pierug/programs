@@ -13,8 +13,6 @@ meanHistGrayImage = mean(histGrayImage)
 minHistGrayImage = min(histGrayImage)
 maxHistGrayImage = max(histGrayImage)
 
-
-
 figure,
 title('Obraz po wyrównaniu histogramu');
 grayImageCorrect = histeq(grayImage);
@@ -32,11 +30,10 @@ for i=1:4
     title(str);
 end
 
-
 F=fft2(double(grayImage));
 S=fftshift(F);
-L=log2(S);
-A=abs(L);
+L=log2(abs(S));
+A=L;
 figure,
 
 imagesc(A)
