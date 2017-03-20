@@ -1,0 +1,20 @@
+#ifndef TROOPER_H
+#define TROOPER_H
+
+#include <iostream>
+
+using namespace std;
+
+class Trooper
+{
+public:
+    virtual Trooper* clone()=0;
+    virtual void Salute()=0;
+    virtual ~Trooper()=0;
+};
+
+
+class StormTrooper: public Trooper{
+    
+};
+#endif // TROOPER_H

@@ -1,31 +1,22 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Adam Piasecki</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/aboutMe.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="./js/jquery.js"></script>
         <script type="text/javascript" src="./js/slimbox2.js"></script>
         <script type="text/javascript" src="./js/preloadImages.js"></script>
-
         <script src="viewportchecker.js"></script>
         <script>
-
             $(document).ready(function () {
                     var r = $("div");
                     r.css({"opacity": "0.0"});
                     r.animate({opacity: 0.0}, 1000);
                     r.animate({opacity: 0.95}, 1000);
             });
-
             function changeContentAndHeaderColor(pageName) {
                 $(document).ready(function () {
                     changeContent(pageName);
@@ -40,7 +31,6 @@ and open the template in the editor.
                     });
                 });
             }
-
         </script>
     </head>
     <body>
@@ -54,7 +44,6 @@ and open the template in the editor.
                 </ul>
             </div>
         </header>
-
         <div id="container">
             <div id="text">
                 <h2>

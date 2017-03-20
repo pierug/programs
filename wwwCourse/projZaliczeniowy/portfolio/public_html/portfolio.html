@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Adam Piasecki</title>
@@ -11,18 +6,15 @@ and open the template in the editor.
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/portfolio.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="./js/jquery.js"></script>
         <script type="text/javascript" src="./js/slimbox2.js"></script>
         <script type="text/javascript" src="./js/preloadImages.js"></script>
-
         <script src="viewportchecker.js"></script>
         <script>
             var clicked = false;
             var clicked_img = false;
             $('html').click(function () {
-
                 $(document).ready(function () {
                     var r = $('#pdf_view');
 
@@ -51,13 +43,11 @@ and open the template in the editor.
                     return false;
                 }
             }
-
             function openWindow() {
                 $(document).ready(function () {
                     clicked = true;
                 });
             }
-
             var modal = document.getElementById('myModal');
             function openImgWindow(imgID, imageSrc) {
                 $(document).ready(function () {
@@ -65,47 +55,41 @@ and open the template in the editor.
                     $('#img01').attr('src', imageSrc);
                 });
             }
-
             var span = document.getElementsByClassName("close")[0];
-
             span.onclick = function () {
                 modal.style.display = "none";
             }
-
         </script>
     </head>
     <body>
         <div id="myModal" class="modal">
             <span class="close" onclick="document.getElementById('myModal').style.display = 'none'">&times;</span>
-            <img class="modal-content" id="img01">
+            <img class="modal-content" src="images/odoKrobosKwadratMini.jpg" id="img01"  alt="ImageBox"/>
             <div id="caption"></div>
         </div>
-
         <div id="pdf_view">
-            <object data="rozdzial.pdf" type="application/pdf" width="100%" height="100%">
+            <object data="rozdzial.pdf" type="application/pdf" id="pdf" >
                 <p>Alternative text - include a link <a href="rozdzial.pdf">to the PDF!</a></p>
             </object> 
         </div>
         <div id="container">
             <div id="gallery">
-
                 <h3>
                     Projects for Infinum3D
                 </h3>
-
                 <table>
                     <tr>
                         <td class="imageBox">
-                            <img src="images/odoKrobosKwadratMini.jpg" class='class_img' id='image1' onclick="openImgWindow('image1', 'images/odoKrobosKwadrat.jpg')"/>
+                            <img src="images/odoKrobosKwadratMini.jpg" class='class_img' alt="odoKronos" id='image1' onclick="openImgWindow('image1', 'images/odoKrobosKwadrat.jpg')"/>
                         </td>
                         <td class="textBox">
                             The Odo Kronos is the biggest 3D printer in Poland.
-                            I have made software for this printer modules.
+                            I made software for this printer modules.
                         </td>
                     </tr>
                     <tr>
                         <td class="imageBox">
-                            <img src="images/odoPlayMini.jpg" class='class_img' id='image2' onclick="openImgWindow('image2', 'images/odoPlay.jpg')"/>
+                            <img src="images/odoPlayMini.jpg" class='class_img' id='image2' alt="odoPlay" onclick="openImgWindow('image2', 'images/odoPlay.jpg')"/>
                         </td>
                         <td class="textBox">
                             The Odo Play is a delta 3D printer. I have tested and
@@ -114,55 +98,49 @@ and open the template in the editor.
                     </tr> 
                     <tr>
                         <td class="imageBox">
-                            <img src="images/ODO-MotionMini.jpg" class='class_img' id='image3' onclick="openImgWindow('image3', 'images/ODO-Motion.jpg')"/>
+                            <img src="images/ODO-MotionMini.jpg" class='class_img' id='image3' alt="odoMotion" onclick="openImgWindow('image3', 'images/ODO-Motion.jpg')"/>
                         </td>
                         <td class="textBox">
                             The Odo Motion is an acessory for 3D printers 
-                            which is used for probe Z axis. I have made 
+                            which is used for probe Z axis. I made 
                             communication software and test software.
                         </td>
                     </tr> 
                     <tr>
                         <td class="imageBox">
-                            <img src="images/odoiiMini.jpg" class='class_img' id='image4' onclick="openImgWindow('image4', 'images/odoii.jpg')"/>
+                            <img src="images/odoiiMini.jpg" class='class_img' id='image4' alt="odoII" onclick="openImgWindow('image4', 'images/odoii.jpg')"/>
                         </td>
                         <td class="textBox">
                             The OdoII is an electronic control devide for
-                            3D printers. I have made software for this printer modules and
+                            3D printers. I made software for this printer modules and
                             software for GUI module.
                         </td>
                     </tr> 
-
                 </table>
-
                 <h3>
                     Thesis projects
                 </h3>
-
                 <table>
                     <tr>
                         <td class="imageBox">
-                            <img src="images/odoKrobosKwadratMini.jpg"  class='class_img' id='image5' onclick="openImgWindow('image5', 'images/odoKrobosKwadrat.jpg')"/>
+                            <img src="images/odoKrobosKwadratMini.jpg"  class='class_img' id='image5' alt="masterThesis" onclick="openImgWindow('image5', 'images/odoKrobosKwadrat.jpg')"/>
                         </td>
                         <td class="textBox">
-                            Odo Kronos 
+                            "Analysis of possibilities to improve treatment and develop a system of telemedicine to support the work of medical personnel"
+                            is my master thesis.
                         </td>
                     </tr>
                     <tr>
                         <td class="imageBox">
-                            <img src="images/engThesisMini.jpg" class='class_img' id='image6' onclick="openImgWindow('image6', 'images/engThesis.jpg')"/>
+                            <img src="images/engThesisMini.jpg" class='class_img' id='image6' alt="engThesis" onclick="openImgWindow('image6', 'images/engThesis.jpg')"/>
                         </td>
                         <td class="textBox">
                             ”A project of syringe infusion pump controlled by microprocessor”
-                            is my engineering thesis. I have made PID regulator alghotitm, software and 
-                            electronic circut. </br>
+                            is my engineering thesis. 
                             <a href="javascript:void(0)" id="openPdfView" onclick="openWindow()" >Chapter of "Problemy Współczesnej Inżynierii"
                                 about my project. </a>
-
                         </td>
                     </tr> 
-
-
                 </table>
             </div>
         </div>
