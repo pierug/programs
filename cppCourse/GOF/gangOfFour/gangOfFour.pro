@@ -11,4 +11,6 @@ HEADERS += \
     abstractfactory.h \
     prototype.h \
     factorymethod.h \
-    builder.h
+    builder.h \
+    adapter1.h \
+    decorator.h

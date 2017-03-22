@@ -52,7 +52,9 @@ DIST          =  singleton.h \
 		abstractfactory.h \
 		prototype.h \
 		factorymethod.h \
-		builder.h ../gangOfFour/main.cpp \
+		builder.h \
+		adapter1.h \
+		decorator.h ../gangOfFour/main.cpp \
 		../gangOfFour/singleton.cpp
 QMAKE_TARGET  = gangOfFour
 DESTDIR        = release/ #avoid trailing-slash linebreak
@@ -104,7 +106,9 @@ release/main.o: ../gangOfFour/main.cpp ../gangOfFour/singleton.h \
 		../gangOfFour/abstractfactory.h \
 		../gangOfFour/prototype.h \
 		../gangOfFour/factorymethod.h \
-		../gangOfFour/builder.h
+		../gangOfFour/builder.h \
+		../gangOfFour/adapter1.h \
+		../gangOfFour/decorator.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/main.o ../gangOfFour/main.cpp
 
 release/singleton.o: ../gangOfFour/singleton.cpp ../gangOfFour/singleton.h

@@ -59,16 +59,20 @@ int main(int argc, char *argv[])
 */
     /*Queue*/
     Queue <int>queue;
-    queue.push(14);
-    queue.push(3);
+
+    //queue.push(14);
+    //queue.push(3);
     queue.push(55);
     queue.push(1);
     queue.push(33);
     queue.push(5);
-    queue.dequeue();
+    queue.selectionSort();
     queue.display();
 
+    //cout<<"lenght: "<<queue.lenght()<<", getAt(3)"<<queue.getAt(3)<<endl;
+    //queue.setAt(4,queue.getAt(0));
 
+    //queue.display();
 
     return 0;
 }

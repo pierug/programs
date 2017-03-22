@@ -100,7 +100,8 @@ compiler_clean:
 release/main.o: ../structures/main.cpp ../structures/structures.h \
 		../structures/element.h \
 		../structures/myStack.h \
-		../structures/mylist.h
+		../structures/mylist.h \
+		../structures/queue.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/main.o ../structures/main.cpp
 
 ####### Install

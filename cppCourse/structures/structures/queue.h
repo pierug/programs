@@ -5,12 +5,12 @@
 template<typename T>
 class Queue: public MyList<T>{
 public:
-    /*Queue(): MyList(){
+    Queue(): MyList<T>::MyList(){
 
     }
-    Queue(Queue& queue): MyList(queue){
+    Queue(Queue& queue): MyList<T>::MyList(queue){
 
-    }*/
+    }
     void push(T v){
         MyList<T>::pushFront(v);
     }

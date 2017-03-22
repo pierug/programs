@@ -4,6 +4,8 @@
 #include "prototype.h"
 #include "factorymethod.h"
 #include "builder.h"
+#include "adapter1.h"
+#include "decorator.h"
 
 //#define MERCEDES
 using namespace std;
@@ -69,5 +71,24 @@ int main(int argc, char *argv[])
 
     delete director;
 
+    /*Adapter*/
+    cout<<"Adapter"<<endl;
+    Timer* timer = new WINTimer;
+    char* ptr;
+    ptr = timer->printTime();
+    cout<<"Zegar OSI pokazal: "<<ptr<<endl;
+    delete timer;
+
+    /*Decorator*/
+    cout<< "Decorator" <<endl;
+
+    Component* cA = new ConcreteDecoratorA(new ConcreteComponent);
+    Component* cAB = new ConcreteDecoratorB(new ConcreteDecoratorA(new ConcreteComponent));
+
+    cA->operation();
+    cAB->operation();
+
+    delete cA;
+    delete cAB;
     return 0;
 }
