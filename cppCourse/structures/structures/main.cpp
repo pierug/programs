@@ -58,15 +58,26 @@ int main(int argc, char *argv[])
     list2.display();
 */
     /*Queue*/
-    Queue <int>queue;
+   /* Queue <int>queue;
 
-    //queue.push(14);
-    //queue.push(3);
+    queue.push(14);
+    queue.push(3);
     queue.push(55);
     queue.push(1);
     queue.push(33);
     queue.push(5);
-    queue.selectionSort();
+    queue.quickSort(MyList<int>::SortType::FROM_MAX_TO_MIN);
+    queue.display();*/
+
+    Queue <string>queue;
+
+    queue.push("ADAM");
+    queue.push("ADA");
+    queue.push("EWA");
+    queue.push("ANDRZEJ");
+    queue.push("ZOFIA");
+    queue.push("ANDZELA");
+    queue.selectionSort(/*MyList<string>::SortType::FROM_MAX_TO_MIN*/);
     queue.display();
 
     //cout<<"lenght: "<<queue.lenght()<<", getAt(3)"<<queue.getAt(3)<<endl;

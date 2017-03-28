@@ -48,7 +48,17 @@ SOURCES       = ../gangOfFour/main.cpp \
 OBJECTS       = release/main.o \
 		release/singleton.o
 
-DIST          =  singleton.h ../gangOfFour/main.cpp \
+DIST          =  singleton.h \
+		abstractfactory.h \
+		prototype.h \
+		factorymethod.h \
+		builder.h \
+		adapter1.h \
+		decorator.h \
+		facade.h \
+		proxy.h \
+		composite.h \
+		ceocomposite.h ../gangOfFour/main.cpp \
 		../gangOfFour/singleton.cpp
 QMAKE_TARGET  = gangOfFour
 DESTDIR        = release/ #avoid trailing-slash linebreak
@@ -96,7 +106,17 @@ compiler_clean:
 
 ####### Compile
 
-release/main.o: ../gangOfFour/main.cpp ../gangOfFour/singleton.h
+release/main.o: ../gangOfFour/main.cpp ../gangOfFour/singleton.h \
+		../gangOfFour/abstractfactory.h \
+		../gangOfFour/prototype.h \
+		../gangOfFour/factorymethod.h \
+		../gangOfFour/builder.h \
+		../gangOfFour/adapter1.h \
+		../gangOfFour/decorator.h \
+		../gangOfFour/facade.h \
+		../gangOfFour/proxy.h \
+		../gangOfFour/composite.h \
+		../gangOfFour/ceocomposite.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/main.o ../gangOfFour/main.cpp
 
 release/singleton.o: ../gangOfFour/singleton.cpp ../gangOfFour/singleton.h

@@ -4,7 +4,8 @@
 #include "element.h"
 #include <iostream>
 #include <typeinfo>
-
+#include <cstdio>
+#include <cstring>
 using namespace std;
 template<typename T>
 class MyList: public Structures<T>
@@ -17,6 +18,11 @@ private:
     };
 
 public:
+    enum SortType{
+        FROM_MAX_TO_MIN,
+        FROM_MIN_TO_MAX
+    };
+
     explicit MyList(){
         frontElement = NULL;
         backElement = NULL;
@@ -155,9 +161,9 @@ public:
         cout<<"First Element Adres: "<<frontElement<<endl;
     }
 
-    T getAt(uint32_t index){
+    T getAt(const int& index){
         if(index >= this->lenght()){
-            cout<<"Ogranij sie chlopie"<<endl;
+            cout<<"Ogranij sie chlopie, getAt, index :"<<index<<endl;
             return NULL;
         }
         tmpPointer = backElement;
@@ -169,13 +175,13 @@ public:
             i++;
             tmpPointer = tmpPointer->next;
         }
-        cout<<"Ogranij sie chlopie"<<endl;
+        cout<<"Ogranij sie chlopie, getAt, index :"<<index<<endl;
     }
 
 
-    void setAt(uint32_t index, T v){
+    void setAt(const int& index, T v){
         if(index >= this->lenght()){
-            cout<<"Ogranij sie chlopie"<<endl;
+            cout<<"Ogranij sie chlopie, setAt, index :"<<index<<endl;
         }else{
             tmpPointer = backElement;
             int i=0;
@@ -191,45 +197,204 @@ public:
     }
 
 
-    void insertSort(){
-
-    }
-
-    void quickSort(){
-
-    }
-
-    void selectionSort(){
+    void insertSort(SortType sortType = FROM_MIN_TO_MAX){
+        T tmp;
+        int j;
         if(type == NUMBER){
-            T tmp, M, I;
-            int m;
-            for(int i=0;i<this->lenght()-1;i++){
-                m=i;
 
-                for (int j = i+1; j < this->lenght(); j++) {
-                    M = this->getAt(m);
-                    I = this->getAt(j);
-                    if(M < I){
-                       //cout<<"Compare: "<<this->getAt(m)<<" < "<<this->getAt(j)<<endl;
-                        m=j;
-                        //cout<<m<<endl;
+            if(sortType == FROM_MIN_TO_MAX){
+                for(int i=1;i<this->lenght();i++){
+                    j=i-1;
+                    tmp = this->getAt(i);
+
+                    while (j>=0 && this->getAt(j)>tmp) {
+                        this->setAt(j+1,this->getAt(j));
+                        j--;
                     }
+                    this->setAt(j+1,tmp);
                 }
-                if(m=!i){
-                    tmp = M = this->getAt(m);
-                    I = this->getAt(i);
-                    this->setAt(m,I);
-                    this->setAt(i,M);
-                    //tmp = this->getAt(m);
-                    //this->setAt(m,this->getAt(i));
-                    //this->setAt(i,tmp);
+            }else{
+                for(int i=1;i<this->lenght();i++){
+                    j=i-1;
+                    tmp = this->getAt(i);
 
+                    while (j>=0 && this->getAt(j)<tmp) {
+                        this->setAt(j+1,this->getAt(j));
+                        j--;
+                    }
+                    this->setAt(j+1,tmp);
+                }
+            }
+        }else{
+            if(sortType == FROM_MIN_TO_MAX){
+                for(int i=1;i<this->lenght();i++){
+                    j=i-1;
+                    tmp = this->getAt(i);
+                    while (j>=0 && (this->getAt(j).compare(tmp)>0)) {
+                        this->setAt(j+1,this->getAt(j));
+                        j--;
+                    }
+                    this->setAt(j+1,tmp);
+                }
+            }else{
+                for(int i=1;i<this->lenght();i++){
+                    j=i-1;
+                    tmp = this->getAt(i);
+                    while (j>=0 && (this->getAt(j).compare(tmp)<0)) {
+                        this->setAt(j+1,this->getAt(j));
+                        j--;
+                    }
+                    this->setAt(j+1,tmp);
+                }
+            }
+
+        }
+    }
+
+    void quickSortRecoursive(const int& leftIndex,const int& rightIndex,SortType sortType = FROM_MIN_TO_MAX){
+
+        T tmp;
+        int centerIndex = (rightIndex + leftIndex)/2;
+        T centerValue = this->getAt(centerIndex);
+        int l = leftIndex;
+        int r = rightIndex;
+
+        if(type==NUMBER){
+            if(sortType==FROM_MIN_TO_MAX){
+                do{
+                    while( this->getAt(l)<centerValue ) l++;
+                    while( this->getAt(r)>centerValue ) r--;
+
+                    if(l<=r){
+                        tmp=this->getAt(l);
+                        this->setAt(l,this->getAt(r));
+                        this->setAt(r,tmp);
+
+                        l++;
+                        r--;
+                    }
+                }while(l<=r);
+                if(l<rightIndex)quickSortRecoursive(l,rightIndex,sortType);
+                if(leftIndex<r)quickSortRecoursive(leftIndex,r,sortType);
+            }else{
+                do{
+                    while( this->getAt(l)>centerValue ) l++;
+                    while( this->getAt(r)<centerValue ) r--;
+
+                    if(l<=r){
+                        tmp=this->getAt(l);
+                        this->setAt(l,this->getAt(r));
+                        this->setAt(r,tmp);
+
+                        l++;
+                        r--;
+                    }
+                }while(l<=r);
+                if(l<rightIndex)quickSortRecoursive(l,rightIndex,sortType);
+                if(leftIndex<r)quickSortRecoursive(leftIndex,r,sortType);
+            }
+        }else{
+            if(sortType==FROM_MIN_TO_MAX){
+                do{
+                    while( this->getAt(l).compare(centerValue)<0 ) l++;
+                    while( this->getAt(r).compare(centerValue)>0 ) r--;
+
+                    if(l<=r){
+                        tmp=this->getAt(l);
+                        this->setAt(l,this->getAt(r));
+                        this->setAt(r,tmp);
+
+                        l++;
+                        r--;
+                    }
+                }while(l<=r);
+                if(l<rightIndex)quickSortRecoursive(l,rightIndex,sortType);
+                if(leftIndex<r)quickSortRecoursive(leftIndex,r,sortType);
+            }else{
+                do{
+                    while( this->getAt(l).compare(centerValue)>0 ) l++;
+                    while( this->getAt(r).compare(centerValue)<0 ) r--;
+
+                    if(l<=r){
+                        tmp=this->getAt(l);
+                        this->setAt(l,this->getAt(r));
+                        this->setAt(r,tmp);
+
+                        l++;
+                        r--;
+                    }
+                }while(l<=r);
+                if(l<rightIndex)quickSortRecoursive(l,rightIndex,sortType);
+                if(leftIndex<r)quickSortRecoursive(leftIndex,r,sortType);
+            }
+        }
+
+
+    }
+
+    void quickSort(SortType sortType = FROM_MIN_TO_MAX){
+        quickSortRecoursive(0,this->lenght()-1,sortType);
+    }
+
+    void selectionSort(SortType sortType = FROM_MIN_TO_MAX){
+        T tmp;
+        int m;
+        if(type == NUMBER){
+            if(sortType == FROM_MIN_TO_MAX){
+                for(int i=0;i<this->lenght()-1;i++){
+                    m=i;
+                    for (int j = i+1; j < this->lenght(); j++) {
+                        if(this->getAt(m) > this->getAt(j)){
+                            m=j;
+                        }
+                    }
+                    tmp = this->getAt(m);
+                    this->setAt(m,this->getAt(i));
+                    this->setAt(i,tmp);
+                }
+            }else{
+                for(int i=0;i<this->lenght()-1;i++){
+                    m=i;
+                    for (int j = i+1; j < this->lenght(); j++) {
+                        if(this->getAt(m) < this->getAt(j)){
+                            m=j;
+                        }
+                    }
+                    tmp = this->getAt(m);
+                    this->setAt(m,this->getAt(i));
+                    this->setAt(i,tmp);
+                }
+            }
+        }else{
+            if(sortType == FROM_MIN_TO_MAX){
+                for(int i=0;i<this->lenght()-1;i++){
+                    m=i;
+                    for (int j = i+1; j < this->lenght(); j++) {
+                        if(this->getAt(m).compare(this->getAt(j))>0){
+                            m=j;
+                        }
+                    }
+                    tmp = this->getAt(m);
+                    this->setAt(m,this->getAt(i));
+                    this->setAt(i,tmp);
+                }
+            }else{
+                for(int i=0;i<this->lenght()-1;i++){
+                    m=i;
+                    for (int j = i+1; j < this->lenght(); j++) {
+                        if(this->getAt(m).compare(this->getAt(j))<0){
+                            m=j;
+                        }
+                    }
+                    tmp = this->getAt(m);
+                    this->setAt(m,this->getAt(i));
+                    this->setAt(i,tmp);
                 }
             }
         }
     }
 
-    void mergeSort(){
+    void mergeSort(SortType sortType = FROM_MIN_TO_MAX){
 
     }
 };

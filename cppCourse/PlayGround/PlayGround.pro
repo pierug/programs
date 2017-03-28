@@ -10,7 +10,9 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    effort.cpp
+    effort.cpp \
+    fibonacci.cpp
 
 HEADERS += \
-    effort.h
+    effort.h \
+    fibonacci.h

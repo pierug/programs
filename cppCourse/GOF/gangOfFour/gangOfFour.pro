@@ -13,4 +13,8 @@ HEADERS += \
     factorymethod.h \
     builder.h \
     adapter1.h \
-    decorator.h
+    decorator.h \
+    facade.h \
+    proxy.h \
+    composite.h \
+    ceocomposite.h
