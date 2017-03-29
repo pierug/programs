@@ -15,19 +15,16 @@ function pokaz(id)
         default:
             tresc += pokazOmnie();
     }
-    //pobierz element o wskazanym id i ustaw jego nową zawartość:
     document.getElementById('blok').innerHTML = tresc;
 }
 
 function pokazOmnie() {
     tresc = '<h2><br />O mnie</h2> ';
-    //operator += uzupełnia łańcuch kolejną porcją znaków:
     tresc += '<p>Lorem ipsum dolor pariatur,...</p>' +
-            '<p class="srodek"><img src="images/baner.jpg" alt="Zdjęcie" /></p>' +
+            '<p class="srodek"><img src="images/obraz1.jpg" alt="Zdjęcie" /></p>' +
             '<article><h2>Moje hobby</h2><p>' +
             'Lorem ipsum dolor sit amet,...' +
             'mollit anim id est laborum.</p></article>';
-    //przekaż wynik – gotową zawartość – do miejsca wywołania funkcji:
     return tresc;
 }
 
@@ -38,7 +35,7 @@ function pokazGalerie()
 
     for (i = 1; i <= 10; i++)
     {
-        tresc += '<div class="slajd"> <src="images/obraz'+i+'.jpg" alt="Zdjęcie'+i+'"/></div>';
+        tresc += '<div class="slajd"> <img src="images/obraz'+i+'.jpg" alt="Zdjęcie'+i+'"/></div>';
     }
     return tresc + '</div>';
 }
@@ -46,14 +43,11 @@ function pokazGalerie()
 function pokazKontakt()
 {
     tresc = '<h2><br />Kontakt</h2>';
-    //uzupełnij treść:
     tresc+= '<p>adam.piasecki@pollub.edu.pl</p>';
     return tresc;
 }
 function pokazDane()
 {
-    //Funkcja zbiera dane wpisane w pola formularza i wyświetla okienko
-    //typu confirm do zatwierdzenia przez użytkownika:
     dane = "Następujące dane zostaną wysłane:\n";
     dane += "Email: " + document.getElementById('email').value + "\n";
     dane += "Nazwisko i imię: " + document.getElementById('name').value + "\n";
