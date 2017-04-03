@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-03-01, 10:40:18
+    Author     : student
+*/
+
+body {
+    background: #8080ff;
+    color:#000040;
+    
+}
+
+h2, h1, footer {
+    background:#0000a0;
+    color:#8080ff;
+    text-align:center;
+    clear:both;
+    width:100%;
+    padding:5px 0 5px 0;
+}
+
+nav {
+    float:left;
+    width:100%;
+    margin:0;
+    padding:0;
+    background:#ffffff;
+    border-bottom:2px solid #0000a0;
+}
+
+#nav {
+    text-align: left;
+    overflow: hidden;
+    font-family: calibri, tahoma;
+    
+}
+ul#nav li {
+    border: 1px solid #d5d5d5;
+    border-radius: 25px;
+    list-style-type: none;
+    float: left;
+    background: #98bed8;
+    margin-left: 3px;
+}
+ul#nav li:hover {
+    border-radius: 25px;
+    border: 1px solid #d5d5d5;
+    list-style-type: none;
+    float: left;
+    background: #f0f0f0;
+    margin-left: 3px;
+}
+ul#nav li a {
+    display : block;
+    padding : 4pt;
+    text-decoration : none;
+}
+ul#nav li li a {
+    width: 160px;
+}
+ul#nav li li:hover {
+    background: white;
+}
+ul#nav li ul { 
+    overflow: hidden;
+    display: none;
+}
+ul#nav li:hover ul {
+    position: absolute;
+    background: #aaa;
+    padding: 0;
+    display: block;
+    width: 177px;
+}
+#tresc {
+    background: #33ffff;
+    float:left;
+    width:75%;
+    padding:1%;
+    text-align: left;
+}
+
+#pasek {
+    float:right;
+    width:20%;
+    padding:1%;
+}
+*.box { 
+    background:#0000a0;
+    color:#dbffff;
+    padding:5px;
+    margin:5px;
+    font-size:90%;
+    border-radius: 25px;
+    opacity: 0.9;
+}
+*.box a{color:#ffffb0}
+
+#kontener{
+    background:#ffffff;
+    width: 80%;
+    margin:0 auto;
+}
