@@ -1,0 +1,47 @@
+#text p{
+    text-align: left;
+    font-size: 20px;
+}
+*.txt{
+    font: 16px Verdana, Geneva, sans-serif;
+    color: black;
+}
+*.btn{
+    display: table;
+    margin: 0 auto;
+    background: #ffffff;
+    width: 50%;
+    font: 16px Verdana, Geneva, sans-serif; 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 16px;
+}
+*.btn:hover{
+    background: #bbb
+}
+textarea{
+    width: 25em;
+    height: 15em;
+}
+
+@media screen and (max-width: 720px) {
+
+    *.txt{
+        font-size: 13px;
+    }
+    #text p{
+        font-size: 18px;
+    }
+    textarea{
+        width: 22em;
+        height: 10em;
+    }
+    *.btn{
+        padding: 10px 27px;
+        font-size: 13px;
+    }
+}

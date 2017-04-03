@@ -58,7 +58,8 @@ DIST          =  singleton.h \
 		facade.h \
 		proxy.h \
 		composite.h \
-		ceocomposite.h ../gangOfFour/main.cpp \
+		ceocomposite.h \
+		bridge.h ../gangOfFour/main.cpp \
 		../gangOfFour/singleton.cpp
 QMAKE_TARGET  = gangOfFour
 DESTDIR        = debug/ #avoid trailing-slash linebreak

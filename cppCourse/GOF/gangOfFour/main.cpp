@@ -10,6 +10,10 @@
 #include "proxy.h"
 #include "composite.h"
 #include "ceocomposite.h"
+#include "bridge.h"
+#include "flyweight.h"
+#include "templatemethod.h"
+#include <cstdlib>
 
 //#define MERCEDES
 using namespace std;
@@ -165,6 +169,53 @@ int main(int argc, char *argv[])
     cout << "The hierarchy of the company,\ni.e. president and all who is under his supervision :\n\n" ;
         president.printSalary(0);
 
+    /*Bridge*/
+    cout<<"Bridge"<<endl;
+
+    Shape* shapes[] = {new CircleShape(1,2,3,new Drawing1()),new CircleShape(12,32,13,new Drawing2())};
+    for(int i=0;i<2;i++){
+        shapes[i]->resizeByPrecentage(2);
+        shapes[i]->draw();
+    }
+
+    /*Flyweight*/
+    cout<<"Flyweight"<<endl;
+
+    DialogBox *dialogs[2];
+    dialogs[0] = new FileSelection(FlyweightFactory::getIcon("go"),
+      FlyweightFactory::getIcon("stop"), FlyweightFactory::getIcon("select"));
+    dialogs[1] = new CommitTransaction(FlyweightFactory::getIcon("select"),
+      FlyweightFactory::getIcon("stop"), FlyweightFactory::getIcon("undo"));
+
+    for (int i = 0; i < 2; i++)
+      dialogs[i]->draw();
+
+    FlyweightFactory::reportTheIcons();
+
+    /*Template Method*/
+    cout<<"Template Method"<<endl;
+
+    srand((unsigned int)time((time_t *)NULL));
+    int array[10];
+    for(int i=0;i<10;i++){
+        array[i]=rand()%100;
+        cout<<array[i]<<' ';
+    }
+
+    Increase *increase = new Increase;
+    increase->shellSort(array,10);
+    cout<<"Rosnąco"<<endl;
+
+    for(int i=0;i<10;i++){
+        cout<<array[i]<<' ';
+    }
+    Decrease *decrease = new Decrease;
+    decrease->shellSort(array,10);
+    cout<<"Malejąco"<<endl;
+
+    for(int i=0;i<10;i++){
+        cout<<array[i]<<' ';
+    }
     return 0;
 
 }

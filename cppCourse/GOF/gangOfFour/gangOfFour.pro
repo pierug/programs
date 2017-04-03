@@ -17,4 +17,7 @@ HEADERS += \
     facade.h \
     proxy.h \
     composite.h \
-    ceocomposite.h
+    ceocomposite.h \
+    bridge.h \
+    flyweight.h \
+    templatemethod.h

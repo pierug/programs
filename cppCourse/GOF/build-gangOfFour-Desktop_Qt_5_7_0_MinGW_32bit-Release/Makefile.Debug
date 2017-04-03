@@ -57,7 +57,11 @@ DIST          =  singleton.h \
 		decorator.h \
 		facade.h \
 		proxy.h \
-		composite.h ../gangOfFour/main.cpp \
+		composite.h \
+		ceocomposite.h \
+		bridge.h \
+		flyweight.h \
+		templatemethod.h ../gangOfFour/main.cpp \
 		../gangOfFour/singleton.cpp
 QMAKE_TARGET  = gangOfFour
 DESTDIR        = debug/ #avoid trailing-slash linebreak
@@ -113,7 +117,12 @@ debug/main.o: ../gangOfFour/main.cpp ../gangOfFour/singleton.h \
 		../gangOfFour/adapter1.h \
 		../gangOfFour/decorator.h \
 		../gangOfFour/facade.h \
-		../gangOfFour/proxy.h
+		../gangOfFour/proxy.h \
+		../gangOfFour/composite.h \
+		../gangOfFour/ceocomposite.h \
+		../gangOfFour/bridge.h \
+		../gangOfFour/flyweight.h \
+		../gangOfFour/templatemethod.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug/main.o ../gangOfFour/main.cpp
 
 debug/singleton.o: ../gangOfFour/singleton.cpp ../gangOfFour/singleton.h

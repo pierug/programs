@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-03-01, 12:12:00
+    Author     : student
+*/
+
+table {
+    text-align:center;
+    width:94%;
+    margin:2%;
+}
+/*ustawienie tytułu tabeli:*/
+caption {
+    font-size:150%
+}
+
+img{
+    width: 100px;
+    height: 70px;
+}

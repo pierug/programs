@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Kreator pizzy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>
+            Kreator pizzy
+        </h1>
+        <form action="@" method="post">
+            <fieldset>
+                <legend>Rozmiar</legend>
+                Mała <input type="radio" name="small" value="small" /> 
+                <br/> 
+                Średnia <input type="radio" name="avg" value="avg" />
+                <br/> 
+                Duża <input type="radio" name="big" value="big" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Dodatki</legend>
+                <input type="checkbox" name="salami" value="salami" /> Salami
+                <br/> 
+                <input type="checkbox" name="ham" value="ham" /> Szynka
+                <br/> 
+                <input type="checkbox" name="shrimp" value="shrimp" /> Krewetka
+                <br/> 
+                <input type="checkbox" name="onion" value="onion" /> Cebula
+                <br/> 
+                <input type="checkbox" name="shrooms" value="shrooms" /> Pieczarki
+                <br/> 
+                <input type="checkbox" name="olives" value="olives" /> Oliwki
+            </fieldset>
+
+            <fieldset>
+                <legend>Sosy</legend>
+                <label for="sos">Wybierz sos</label>
+                <select name="sos" id="sos" multiple="multiple">
+                    <option value="onionsos">Czosnkowy</option>
+                    <option value="tomato_light">Pomidorowy łagodny</option>
+                    <option value="tomato_bazil">Pomidorowy bazylia</option>
+                    <option value="tabasco">Tabasco</option>
+                    <option value="mixed">Mieszany</option>
+                </select>
+                <br/>  
+                <label>Inne uwagi</label>   
+                <br/>     
+                <textarea name="content" id="content" cols="70" rows="5"></textarea><br/>
+            </fieldset>
+            <br/>    
+            <input type="reset" value="Wyczyść wprowadzone dane" />
+            <input type="submit" value="Wyślij zamówenie" />
+        </form>
+    </body>
+</html>

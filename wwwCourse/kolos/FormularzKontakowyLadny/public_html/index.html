@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Rejestracja użytkownika</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color:powderblue;font-family:courier;" >
+        <h1 style="font-size:100%;">
+            Formularz kontaktowy
+        </h1>
+        <form action="@" method="post">
+            <table>
+                <tr>
+                    <td width="200" height="30">
+                        <label > Imię (*)</label>
+                    </td>
+                    <td width="200" height="30">
+                        <input type="text" name="contact_person" id="name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label> Nazwisko (*)</label>
+
+                    </td>
+                    <td width="200" height="30">
+                        <input type="text" name="surname" id="surname"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label >E-mail (*)</label>
+
+                    </td>
+                    <td width="200" height="30">
+                        <input type="text" name="email" id="email" placeholder="nowak@domena.com"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label>Hasło</label>
+
+                    </td>
+                    <td width="200" height="30">
+                        <input type="password" name="pass" id="pass" />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label for="reppass">Powtórzone hasło</label>
+                    </td>
+                    <td width="200" height="30">
+                        <input type="password" name="reppass" id="reppass" />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label>Data urodzenia</label>
+                    </td>
+                    <td width="200" height="30">
+                        <input type="text" name="birth" />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label>Plec</label>
+                    </td>
+                    <td width="500" height="30">
+                        <input type="checkbox" name="woman" value="woman" /> Kobieta
+                        <input type="checkbox" name="man" value="man" /> Mężczyzna
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label>Zainteresowania</label>
+                    </td>
+                    <td width="500" height="30">
+                        <input type="radio" name="soft" value="soft" /> Software
+                        <input type="radio" name="hard" value="hard" /> Hardware
+                        <input type="radio" name="tele" value="tele" /> Telekomunikacja
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label>Strona www</label>
+                    </td>
+                    <td width="200" height="30">
+                        <input type="text" name="web" id="web"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="200" height="30">
+                        <label>Regulamin</label>
+                    </td>
+                    <td width="200" height="30">
+                        <input type="checkbox" name="reg" value="reg" /> Akceptuje regulamin serwisu (*)
+                    </td>
+                </tr>
+            </table>
+
+            <br/>        
+            <label>* Pola wymagane</label><br/>
+            <input type="reset" value="Wyczyść" style="background-color:#ff0000;"/>
+            <input type="submit" value="Wyślij"  style="background-color: #66ff66;"/>
+        </form>
+    </body>
+</html>
