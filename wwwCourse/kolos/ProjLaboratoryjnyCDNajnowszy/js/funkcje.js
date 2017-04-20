@@ -9,5 +9,8 @@ function oblicz()
     var odsetkami = document.getElementById('odsetkami');
     miesieczna.value = (k*pr_mc)/(1-(1/Math.pow((1+pr_mc),n)));
     odsetkami.value = parseFloat(miesieczna.value)*n;
+    document.getElementById('kwota').value=10;
+    document.getElementById('procent').innerHTML="DUPA";     
+   
 }
 

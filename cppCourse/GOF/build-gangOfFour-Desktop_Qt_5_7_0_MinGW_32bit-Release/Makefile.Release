@@ -61,7 +61,8 @@ DIST          =  singleton.h \
 		ceocomposite.h \
 		bridge.h \
 		flyweight.h \
-		templatemethod.h ../gangOfFour/main.cpp \
+		templatemethod.h \
+		strategy.h ../gangOfFour/main.cpp \
 		../gangOfFour/singleton.cpp
 QMAKE_TARGET  = gangOfFour
 DESTDIR        = release/ #avoid trailing-slash linebreak
@@ -122,7 +123,8 @@ release/main.o: ../gangOfFour/main.cpp ../gangOfFour/singleton.h \
 		../gangOfFour/ceocomposite.h \
 		../gangOfFour/bridge.h \
 		../gangOfFour/flyweight.h \
-		../gangOfFour/templatemethod.h
+		../gangOfFour/templatemethod.h \
+		../gangOfFour/strategy.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/main.o ../gangOfFour/main.cpp
 
 release/singleton.o: ../gangOfFour/singleton.cpp ../gangOfFour/singleton.h

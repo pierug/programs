@@ -20,4 +20,5 @@ HEADERS += \
     ceocomposite.h \
     bridge.h \
     flyweight.h \
-    templatemethod.h
+    templatemethod.h \
+    strategy.h

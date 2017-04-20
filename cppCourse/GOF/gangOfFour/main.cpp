@@ -13,6 +13,8 @@
 #include "bridge.h"
 #include "flyweight.h"
 #include "templatemethod.h"
+#include "strategy.h"
+
 #include <cstdlib>
 
 //#define MERCEDES
@@ -216,6 +218,21 @@ int main(int argc, char *argv[])
     for(int i=0;i<10;i++){
         cout<<array[i]<<' ';
     }
+
+    /*Strategy*/
+    cout<<"Strategy"<<endl;
+    ContexString contexString;
+    string txt="adam,verter,makumba i koledzy,arbuzy";
+    cout<<"BACKWORDS"<<endl;
+    contexString.setStrategy(ContexString::BACKWORDS,txt);
+    contexString.ContextStringInterface();
+    cout<<"SEPARATE"<<endl;
+    contexString.setStrategy(ContexString::SEPARATE,txt);
+    contexString.ContextStringInterface();
+    cout<<"SEPARATE_COLON"<<endl;
+    contexString.setStrategy(ContexString::SEPARATE_COLON,txt);
+    contexString.ContextStringInterface();
+
     return 0;
 
 }
