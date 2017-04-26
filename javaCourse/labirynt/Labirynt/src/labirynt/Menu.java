@@ -46,21 +46,6 @@ public class Menu extends JPanel {
         plansza.repaint();
     }
 
-    /*
-    public JPanel getMenu(){
-        JPanel jpanel = new JPanel(new BorderLayout());
-        
-        JPanel upMenu = createMenuPanel();
-        JPanel control = createCntrolButtons();
-        
-        jpanel.add(upMenu,BorderLayout.NORTH);
-        jpanel.add(plansza,BorderLayout.CENTER);
-        plansza.setPreferredSize(new Dimension(300,300));
-        jpanel.add(control,BorderLayout.SOUTH);
-        
-        return jpanel;
-    }*/
-
     public JPanel createMenuPanel() {
         JPanel jpanel = new JPanel(new GridLayout(1, 3));
 
@@ -75,6 +60,8 @@ public class Menu extends JPanel {
         newGame.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                plansza.nowySet();
+                plansza.win = false;
                 plansza.setMenu(1); 
                 plansza.repaint();
             }
@@ -91,9 +78,7 @@ public class Menu extends JPanel {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 
-                plansza = new Plansza();
-                plansza.setMenu(1); 
-                plansza.repaint();
+                System.exit(0);
             }
         });
 
@@ -144,33 +129,5 @@ public class Menu extends JPanel {
         });
 
         return jpanel;
-    }
-    
-    
-/*
-    @Override
-    public void paintComponent(Graphics g) {
-        //super.paintComponent(g);
-        System.out.println("paintComponent");
-        //Graphics2D g2 = (Graphics2D) g;
-        //plansza.RysujPlansze(g2);
-        
-    }*/
-    /* public void paintComponent(Graphics g) {
-        Graphics2D g2 = (Graphics2D) g;
-        plansza.RysujPlansze(g2);
-        System.out.println("paintComponent");*/
- /*  switch (menu) {
-            case 2:
-                plansza = new Plansza();
-                menu = 1; //nowa gra
-            case 1:
-                plansza.RysujPlansze(g2);
-                break; //gramy dalej
-            case 0:
-                g2.drawString("Opis gry ...", 50, 50); //opis gry
-        }*/
-    //}
-
-    
+    }  
 }

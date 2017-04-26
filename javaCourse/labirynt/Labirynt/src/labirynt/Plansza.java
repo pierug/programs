@@ -12,6 +12,7 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.imageio.ImageIO;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -27,6 +28,7 @@ public class Plansza extends JPanel {
     private int StaraPozycjaGracza = 0; //poprzednia pozycja gracza
     private int Meta = 90; //pozycja mety 
     private int menu = 1;
+    public boolean win = false;
 
     public void setMenu(int menu) {
         this.menu = menu;
@@ -43,14 +45,25 @@ public class Plansza extends JPanel {
     private Image obrazy[] = new Image[nazwy.length]; //tablica z obrazami
 
     public Plansza() //konstruktor klasy Plansza
-    { //pobierz obrazki do tablicy:      
-        this.setBackground(Color.WHITE);
+    {
+        for (int i = 0; i < Kolumny.length; i++) {
+            Kolumny[i] = (int) (Math.random() * 99) + 1;
+        }
+        Meta = (int) (Math.random() * 99) + 1;
         for (int i = 0; i < nazwy.length; i++) {
             obrazy[i] = Toolkit.getDefaultToolkit().getImage(nazwy[i]);
         }
         UstawPlansze();
     }
-
+    public void nowySet(){
+        PozycjaGracza = 0; //początkowa pozycja gracza
+        StaraPozycjaGracza = 0; //poprzednia pozycja gracza
+        for (int i = 0; i < Kolumny.length; i++) {
+            Kolumny[i] = (int) (Math.random() * 99) + 1;
+        }
+        Meta = (int) (Math.random() * 99) + 1;
+        UstawPlansze();
+    }
     private void UstawPlansze() //ustaw pozycje obrazków na planszy
     {
         for (int i = 0; i < (w * h); i++) // wypełnij tablice zerami
@@ -72,26 +85,25 @@ public class Plansza extends JPanel {
 //pozycji rysujemy podłogę
 //jeśli pozycja gracza pokrywa się z metą – w miejscu mety rysujemy
 //obrazek z graczem na mecie
-
-        if (plansza[PozycjaGracza] == 1) {
+        if (plansza[PozycjaGracza] == 2) {
+            win = true;
+            plansza[PozycjaGracza] = 4;
+            plansza[StaraPozycjaGracza] = 0;
+        } else if (plansza[PozycjaGracza] == 1) {
             PozycjaGracza = StaraPozycjaGracza;
-        }
-        if (plansza[PozycjaGracza] == 0) {
+        } else if (plansza[PozycjaGracza] == 0) {
             plansza[PozycjaGracza] = 3;
             plansza[StaraPozycjaGracza] = 0;
         }
-// if ...
     }
 
     public void RysujPlansze(Graphics2D g) {
-        ZmienPlansze();
-
-//Rysowanie obrazów na planszy po zmianie pozycji gracza
-        for (int i = 0; i < w; i++) {
-            for (int j = 0; j < h; j++) {
-                g.drawImage(obrazy[plansza[i + w * j]], i * 30, j * 30, this);
-//obrazki .jpg mają wymiary 30x30 pikseli
-//wyznaczyć współrzędne x i y położenia kolejnych obrazów na planszy
+        if (!win) {
+            ZmienPlansze();
+            for (int i = 0; i < w; i++) {
+                for (int j = 0; j < h; j++) {
+                    g.drawImage(obrazy[plansza[i + w * j]], i * 30, j * 30, this);
+                }
             }
         }
     }
@@ -107,6 +119,12 @@ public class Plansza extends JPanel {
                 }
                 break;
             case 1: //uzupełnić
+                StaraPozycjaGracza = PozycjaGracza;
+                System.out.println("StaraPozycjaGracza: " + PozycjaGracza);
+                if (PozycjaGracza + 1 < 100) //sprawdz czy można
+                {
+                    PozycjaGracza += 1;
+                }
                 break;
             case 2:
                 StaraPozycjaGracza = PozycjaGracza;
@@ -117,6 +135,13 @@ public class Plansza extends JPanel {
                 }
                 break;
             case 3: //uzupełnić
+                StaraPozycjaGracza = PozycjaGracza;
+                System.out.println("StaraPozycjaGracza: " + PozycjaGracza);
+                if (PozycjaGracza - 1 >= 0) //sprawdz czy można
+                {
+                    PozycjaGracza -= 1;
+                }
+                break;
         }
     }
 
@@ -130,8 +155,14 @@ public class Plansza extends JPanel {
                 RysujPlansze(g2);
                 break; //gramy dalej
             case 0:
-                g2.drawString("Opis gry ...", 50, 50); //opis gry
+                g2.drawString("Kretodyle atakują Manhatan,", 50, 50); //opis gry
+                g2.drawString("sytuacje może uratować jedynie", 50, 70); //opis gry
+                g2.drawString("koleś chodzący po kafelkach!!!", 50, 90); //opis gry
         }
+        if (win) {
+            g2.drawString("Koniec Gry, zagraj jeszcze raz", 50, 50); //opis gry
+        }
+
     }
 
 }

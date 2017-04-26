@@ -6,27 +6,22 @@
         <link rel="stylesheet" href="./css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="./js/jquery.js"></script>
-        <script type="text/javascript" src="./js/slimbox2.js"></script>
-        <script type="text/javascript" src="./js/preloadImages.js"></script>
-        <script src="viewportchecker.js"></script>
         <script>
             $(document).ready(function () {
                     var r = $("div");
                     r.css({"opacity": "0.0"});
                     r.animate({opacity: 0.0}, 1000);
                     r.animate({opacity: 0.95}, 1000);
+                    window.alert("OK");
             });
-            function changeContentAndHeaderColor(pageName) {
-                $(document).ready(function () {
-                    changeContent(pageName);
-                });
-            }
+
             function changeContent(pageName) {
+                alert(pageName);
                 $(document).ready(function () {
                     $("#container").fadeOut(600, function () {
                         $("#container").load(pageName, function () {
                             $("#container").fadeIn(600);
+                            
                         });
                     });
                 });
@@ -37,10 +32,10 @@
         <header>
             <div id="navigationBar"> 
                 <ul>
-                    <li><a href="javascript:void(0)" id="aboutMe" onclick='changeContentAndHeaderColor("./index.html")'>ABOUT ME</a></li>
-                    <li><a href="javascript:void(0)" id="CV" onclick='changeContentAndHeaderColor("./CV.html")'>CV</a></li>
-                    <li><a href="javascript:void(0)" id="portfolio" onclick='changeContentAndHeaderColor("./portfolio.html")'>PORTFOLIO</a></li>
-                    <li><a href="javascript:void(0)" id="contact" onclick='changeContentAndHeaderColor("./contact.html")'>CONTACT</a></li>
+                    <li><a href="javascript:void(0)" id="aboutMe" onclick='changeContent("./index.html")'>ABOUT ME</a></li>
+                    <li><a href="javascript:void(0)" id="CV" onclick='changeContent("./CV.html")'>CV</a></li>
+                    <li><a href="javascript:void(0)" id="portfolio" onclick='changeContent("./portfolio.html")'>PORTFOLIO</a></li>
+                    <li><a href="javascript:void(0)" id="contact" onclick='changeContent("./contact.html")'>CONTACT</a></li>
                 </ul>
             </div>
         </header>

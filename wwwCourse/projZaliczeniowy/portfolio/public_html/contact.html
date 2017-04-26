@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/contact.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <body>
         <div id="container">
@@ -29,7 +30,7 @@
                                     Email 
                                 </td>
                                 <td>
-                                    <input class="txt" type="text" name="text"/> <br />
+                                    <input id="email" class="txt" type="text" name="text" placeholder="name@domain.com" required/> <br />
                                 </td>											
                             </tr>
                             <tr>		
@@ -37,7 +38,7 @@
                                     Subject
                                 </td>
                                 <td>
-                                    <input class="txt" type="text" name="text"/> <br />
+                                    <input id="subject" class="txt" type="text" name="text" placeholder="..." required/> <br />
                                 </td>						
                             </tr>
                             <tr>
@@ -45,12 +46,12 @@
                                     Content
                                 </td>
                                 <td>
-                                    <textarea class="txt" name="Text" ></textarea> <br />
+                                    <textarea id="content" class="txt" name="Text" placeholder="..." required></textarea> <br />
                                 </td>								
                             </tr>
                         </thead>
                     </table>
-                    <input class="btn" type="submit" value="Send" />
+                    <input class="btn" type="submit" value="Send" onclick="saveInLocalStorage()"/>
                 </form>
             </div>
         </div>
