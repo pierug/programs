@@ -13,12 +13,12 @@
 
 #include <cstdlib>
 #include <iostream>
-
+#include "Neaea.h"
 using namespace std;
 int main(int argc, char** argv) {
     string s = "Elo '" "Elo ";
     s =s+string("Elo '" "Elo ");
-    cout<<s<<endl;
+    cout<<s<<":"<<intint()<<endl;
     return 0;
 }
 
