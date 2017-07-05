@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adam Piasecki</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/portfolio.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+       
+        <script>
+            var clicked = false;
+            var clicked_img = false;
+            $('html').click(function () {
+                $(document).ready(function () {
+                    var r = $('#pdf_view');
+
+                    if (isVisible('pdf_view')) {
+                        r.css({"opacity": "1"});
+                        r.animate({opacity: 0}, 1000, function () {
+                            r.css({"visibility": "hidden"});
+                        });
+
+                        clicked = false;
+                    } else {
+                        if (clicked) {
+                            r.css({"opacity": "0.0"});
+                            r.css({"visibility": "visible"});
+                            r.animate({opacity: 0.0}, 1000);
+                            r.animate({opacity: 1}, 1000);
+                        }
+                    }
+                });
+            });
+            function isVisible(id) {
+                var element = $('#' + id);
+                if (element.length > 0 && element.css('visibility') !== 'hidden' && element.css('display') !== 'none') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            function openWindow() {
+                $(document).ready(function () {
+                    clicked = true;
+                });
+            }
+            var modal = document.getElementById('myModal');
+            function openImgWindow(imgID, imageSrc) {
+                $(document).ready(function () {
+                    modal.style.display = "block";
+                    $('#img01').attr('src', imageSrc);
+                });
+            }
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="myModal" class="modal">
+            <span class="close" onclick="document.getElementById('myModal').style.display = 'none'">&times;</span>
+            <img class="modal-content" src="images/odoKrobosKwadratMini.jpg" id="img01"  alt="ImageBox"/>
+            <div id="caption"></div>
+        </div>
+        <div id="pdf_view">
+            <object data="rozdzial.pdf" type="application/pdf" id="pdf" >
+                <p>Alternative text - include a link <a href="rozdzial.pdf">to the PDF!</a></p>
+            </object> 
+        </div>
+        <div id="container">
+            <div id="gallery">
+                <h3>
+                    Projects for Infinum3D
+                </h3>
+                <table>
+                    <tr>
+                        <td class="imageBox">
+                            <img src="images/odoKrobosKwadratMini.jpg" class='class_img' alt="odoKronos" id='image1' onclick="openImgWindow('image1', 'images/odoKrobosKwadrat.jpg')"/>
+                        </td>
+                        <td class="textBox">
+                            The Odo Kronos is the biggest 3D printer in Poland.
+                            I made software for this printer modules.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="imageBox">
+                            <img src="images/odoPlayMini.jpg" class='class_img' id='image2' alt="odoPlay" onclick="openImgWindow('image2', 'images/odoPlay.jpg')"/>
+                        </td>
+                        <td class="textBox">
+                            The Odo Play is a delta 3D printer. I have tested and
+                            configurated software.
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td class="imageBox">
+                            <img src="images/ODO-MotionMini.jpg" class='class_img' id='image3' alt="odoMotion" onclick="openImgWindow('image3', 'images/ODO-Motion.jpg')"/>
+                        </td>
+                        <td class="textBox">
+                            The Odo Motion is an acessory for 3D printers 
+                            which is used for probe Z axis. I made 
+                            communication software and test software.
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td class="imageBox">
+                            <img src="images/odoiiMini.jpg" class='class_img' id='image4' alt="odoII" onclick="openImgWindow('image4', 'images/odoii.jpg')"/>
+                        </td>
+                        <td class="textBox">
+                            The OdoII is an electronic control devide for
+                            3D printers. I made software for this printer modules and
+                            software for GUI module.
+                        </td>
+                    </tr> 
+                </table>
+                <h3>
+                    Thesis projects
+                </h3>
+                <table>
+                    <tr>
+                        <td class="imageBox">
+                            <img src="images/odoKrobosKwadratMini.jpg"  class='class_img' id='image5' alt="masterThesis" onclick="openImgWindow('image5', 'images/odoKrobosKwadrat.jpg')"/>
+                        </td>
+                        <td class="textBox">
+                            "Analysis of possibilities to improve treatment and develop a system of telemedicine to support the work of medical personnel"
+                            is my master thesis.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="imageBox">
+                            <img src="images/engThesisMini.jpg" class='class_img' id='image6' alt="engThesis" onclick="openImgWindow('image6', 'images/engThesis.jpg')"/>
+                        </td>
+                        <td class="textBox">
+                            ”A project of syringe infusion pump controlled by microprocessor”
+                            is my engineering thesis. 
+                            <a href="javascript:void(0)" id="openPdfView" onclick="openWindow()" >Chapter of "Problemy Współczesnej Inżynierii"
+                                about my project. </a>
+                        </td>
+                    </tr> 
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

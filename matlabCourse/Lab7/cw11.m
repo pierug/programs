@@ -1,0 +1,11 @@
+I = imread('cameraman.tif');
+J = imadjust(I, [], [],0.5);
+K = imadjust(I, [], [],3.5);
+subplot(2,2,1);
+imshow(J);
+subplot(2,2,2);
+imhist(J);
+subplot(2,2,4);
+imhist(K);
+subplot(2,2,3);
+imshow(K);

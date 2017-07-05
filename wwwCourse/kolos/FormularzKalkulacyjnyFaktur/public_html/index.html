@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formularze</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>
+            Formularz kalkulacyjny faktur
+        </h1>
+        <form oninput="brutto.value=netto.value * (1+(vat.value/100))" >
+            Kwota netto <input type="number" id="netto" value="0"><br>
+            Stawka Vat <input type="number" max="100" min="0" id="vat" value="23">%<br>
+            Kwota brutto faktury = <output name="brutto" for="netto vat"></output>
+        </form>
+    </body>
+</html>

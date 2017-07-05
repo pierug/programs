@@ -1,0 +1,400 @@
+    1  sudo su -
+    2  sudo apt-get update
+    3  ps
+    4  ps =aux
+    5  ps -aux
+    6  kill -9 4100
+    7  kill -9 4101
+    8  kill -9 4102
+    9  sudo apt-get update
+   10  sudo apt-get upgrade
+   11  reboot
+   12  ifconfig
+   13  sudo su
+   14  sudo
+   15  su
+   16  clear
+   17  ethtool -s advertise NIC statistics:
+   18  ethtool -s advertise "100baseT Half"
+   19  ethtool -s advertise 0x004
+   20  clear
+   21  ethtool -s enp8s6 speed 10 duplex half
+   22  sudo ethtool -s enp8s6 speed 10 duplex half
+   23  ifconfig
+   24  man ifconfig
+   25  cls
+   26  clear
+   27  ifconfig
+   28  ifconfig -i
+   29  ifconfig -a
+   30  ifconfig
+   31  route
+   32  ping
+   33  ping 10.0.0.2
+   34  ping 10.0.2.2
+   35  clear
+   36  route
+   37  ping do-vlan2.polite
+   38  clear
+   39  cat /etc/resolv.conf
+   40  ls /etc/
+   41  ls -l /etc/
+   42  cat /etc/passwd
+   43  clear
+   44  sudo service NetworkManager stop
+   45  ifconfig
+   46  ifconfig enp8s6
+   47  ifconfig enp8s6 down
+   48  sudo ifconfig enp8s6 down
+   49  ifconfig enp8s6 down
+   50  ifconfig enp8s6
+   51  sudo ifconfig enp8s6 up
+   52  ifconfig enp8s6
+   53  man route
+   54  clear
+   55  ~gCA
+   56  ifconfig
+   57  clear
+   58  ifconfig -a
+   59  wireshark
+   60  miitool
+   61  mii-tool
+   62  clear
+   63  man mii-tool
+   64  clear
+   65  ifconfig -a
+   66  ethtool -S enp8s6
+   67  ip
+   68  ip -h
+   69  clear
+   70  ip -f link addr
+   71  ip -f link maddr
+   72  ip -f inet addr
+   73  ifconfig -a
+   74  sudo Networkmanager start
+   75  sudo NetworkManager start
+   76  ifconfig -a
+   77  clear
+   78  ping 127.0.0.1
+   79  clear
+   80  ping 127.0.0.1
+   81  clear
+   82  ping 212.182.65.90
+   83  ifconfig
+   84  ping 212.182.65.95
+   85  ping 212.182.65.95 -b
+   86  ping 212.182.65.65
+   87  clear
+   88  ping 212.182.65.95 -b
+   89  ping 255.255.255.255 -b
+   90  clear
+   91  mii-tool -v
+   92  sudo mii-tool -v
+   93  man mii-tool
+   94  sudo mii-tool -v enp8s6
+   95  clear
+   96  sudo mii-tool --force=10baseT-HD enp8s6
+   97  sudo mii-tool -v enp8s6
+   98  mii-tool --force=10baseT-HD enp8s6
+   99  clear
+  100  sudo mii-tool --force=10baseT-HD enp8s6
+  101  sudo mii-tool -v enp8s6
+  102  man mii-tool
+  103  ifconfig
+  104  man mii-tool
+  105  sudo mii-tool --advertise=10baseT-HD enp8s6
+  106  sudo mii-tool -v enp8s6
+  107  clear
+  108  ethtool
+  109  ethtool -S enp8s3
+  110  ethtool -S enp8s6
+  111  man ethtool
+  112  ethtool -S enp8s6
+  113  man ethtool
+  114  ethtool -S enp8s6
+  115  ethtool enp8s6
+  116  clear
+  117  sudo ethtool -s enp8s6 speed 10 duplex half
+  118  clear
+  119  sudo ethtool -s enp8s6 speed 100 duplex half
+  120  ethtool enp8s6
+  121  man ethtool
+  122  clear
+  123  sudo ethtool -s enp8s6 speed 100 duplex half autoneg off
+  124  ethtool enp8s6
+  125  clear
+  126  ip -f link addr
+  127  ip -f inet addr
+  128  ip -f inet maddr
+  129  man ip
+  130  ip -f inet address
+  131  man ip
+  132  man up
+  133  man ip
+  134  ip addr
+  135  ip -f inet maddr
+  136  ethtool -S enp8s6
+  137  ethtool -S eth0
+  138  ethtool -s enp8s6
+  139  ethtool -S enp8s6
+  140  man ethtool
+  141  ethtool -S enp8s6
+  142  clear
+  143  ethtool -S enp8s6
+  144  ifconfig
+  145  ethtool -S enp8s6
+  146  ethtool -S enp6s0
+  147  ethtool -S enp8s6
+  148  sudo ethtool -r enp8s6
+  149  sudo service networking restasrt
+  150  sudo service networking restart
+  151  ethtool -S enp8s6
+  152  ethtool
+  153  clear
+  154  ethtool -S enp8s6
+  155  ethtool -S enp6s0
+  156  ipconfig
+  157  ipcomfig
+  158  ipconfig
+  159  ifconfig
+  160  route
+  161  arp -a
+  162  arp 
+  163  cat /etc/recolv.conf
+  164  cat /etc/resolv.conf
+  165  ifconfig 
+  166  route add default gw 
+  167  ifconfig 
+  168  route
+  169  ifconfig 
+  170  sudo ethtool enp8s6
+  171  ifconfig 
+  172  ifconfig -a
+  173  ping 212.182.65.70
+  174  ping 212.182.65.90
+  175  ping 212.182.65.70 -b
+  176  mii-tool
+  177  sudo mii-tool
+  178  sudo mii-tool enp8s6
+  179  mii-tool
+  180  man mii-tool
+  181  sudo mii-tool
+  182  sudo mii-tool enp8s6
+  183  mii-tool-v
+  184  mii-tool -v
+  185  sudo mii-tool -v enp8s6
+  186  sudo mii-tool --force=10baseT-HD eth0
+  187  sudo mii-tool --force=10baseT-HD enp8s6
+  188  sudo mii-tool -v enp8s6
+  189  sudo mii-toolm --advertise=10baseT-HD enp8s6
+  190  sudo mii-tool --advertise=10baseT-HD enp8s6
+  191  ethool -S enp8s6
+  192  ethtool -S enp8s6
+  193  sudo ethtool -S enp8s6
+  194  ifconfig 
+  195  sudo ethtool -S enp8s6
+  196  sudo ethtool -Svvv enp8s6
+  197  sudo ethtool -Sv enp8s6
+  198  sudo ethtool -Svvv enp5s0
+  199  sudo ethtool -Svvv enp6s0
+  200  sudo ethtool -S enp6s0
+  201  sudo ethtool -S enp8s6
+  202  sudo sthtool --force=100BaseTx-HD enp8s6
+  203  sudo ethtool --force=100BaseTx-HD enp8s6
+  204  man ethtool
+  205  ethtool -h
+  206  sudo ethtool --set=100BaseTx-HD enp8s6
+  207  sudo ethtool --force=100BaseTx-HD enp8s6
+  208  ip -f link addr
+  209  ip -f inet addr
+  210  ip -f inet maddr
+  211  sudo mii-tool --force=100BaseTx-HD enp8s6
+  212  sudo mii-tool -v enp8s6
+  213  history
+  214  cat history
+  215  rm history
+  216  mkdir PiotrRymarski
+  217  rmdir PiotrRymarski
+  218  mkdir PiotrRymarski
+  219  mkdir /PiotrRymarski/katalogA /PiotrRymarski/katalogB /PiotrRymarski/katalogC
+  220  cd /PiotrRymarski
+  221  cd PiotrRymarski
+  222  mkdir katalogA katalogB katalogC
+  223  mv katalogC katalogDoUsuniecia
+  224  ls
+  225  rm katalogDoUsuniecia
+  226  rmdir katalogDoUsuniecia
+  227  cd katalogB
+  228  touch plikA plikB plikC NieUsuwalny
+  229  ls
+  230  mv plikD.odt plikDoUsuniecia
+  231  mv plikA plikB
+  232  ls
+  233  touch plikA
+  234  mv -b plikA plikB
+  235  ls
+  236  touch plikA
+  237  mv -i plikA plikB
+  238  ls
+  239  rm plikDoUsuniecia
+  240  rm plik*
+  241  ls
+  242  touch plikA plikB
+  243  mv -b plikA plikB
+  244  ls
+  245  rm -i plik*
+  246  rmdir katalogB
+  247  rm plik*
+  248  cd ..
+  249  rmdir katalogB
+  250  rm -r katalogB
+  251  ls
+  252  cd ..
+  253  cd PiotrRymarski
+  254  mkdir katalogB
+  255  cd katalogB
+  256  touch plikA plikB plikC
+  257  cd ..
+  258  mv katalogB katalogA
+  259  ls
+  260  mkdir katalogB
+  261  cd katalogB
+  262  touch plikA plikB plikC
+  263  cd ..
+  264  cd..
+  265  cp katalogA/plikA katalogB/plikTymczasowy
+  266  ls
+  267  cd katalogA
+  268  ls
+  269  cp katalogA/katalogB/plikA katalgB/plikTymczasowy
+  270  cd ..
+  271  cp katalogB* katalogA
+  272  cp katalogB/* katalogA
+  273  mv katalogA/plikA katalogB/plikTymczasowy
+  274  cd katalogB
+  275  ls
+  276  cd ~
+  277  rm -r PiotrRymarski
+  278  man ifconfig
+  279  ifconfig -a
+  280  ifconfig 
+  281  sudo su
+  282  history
+  283  clear
+  284  mkdir DenysFostiichuk
+  285  clear
+  286  cd /home/student
+  287  mkdir DenysFostiichuk
+  288  cd DenysFostiichuk
+  289  mkdir katalogA
+  290  mkdir katalogb
+  291  mkdir katalogC
+  292  cd katalogC
+  293  mv KatalogdlaUsuwa
+  294  mv KatdalUsuen
+  295  rmdir katalogC
+  296  cd DenysFostiichuk
+  297  cd ..
+  298  rmdir katalogC
+  299  cd katalogb
+  300  PlikD
+  301  mkdir PlikD
+  302  nano
+  303  cat
+  304  rm
+  305  rmcd ..
+  306  cd ..
+  307  cd katalogb
+  308  rm  plik*
+  309  rmdir
+  310  cd ..
+  311  rmdir katalogb
+  312  cd katalogb
+  313  rm Plik*
+  314  rm Plik* -i
+  315  clear
+  316  cd ..
+  317  cd..
+  318  cd .. 
+  319  clear
+  320  ifconfig -a
+  321  ping
+  322  clear
+  323  ifconfig -a
+  324  ping<212.182.65.94>
+  325  clear
+  326  ifconfig -a
+  327  clear
+  328  ifconfig
+  329  ifconfig -a
+  330  ifconfig enp8s6
+  331  ping<212.182.65.94>
+  332  ping <212.182.65.94>
+  333  clear
+  334  ifconfig -a
+  335  ifconfig enp8s6
+  336  ping 212.182.65.94
+  337  ping 212.182.65.90
+  338  clear
+  339  ifconfig 
+  340  ifconfig enp8s6
+  341  ping 212.182.65.95
+  342  ping -b
+  343  ping -b 212.182.65.95
+  344  clear
+  345  mii-tool
+  346  mii-tool eth0
+  347  sudo apk-install mii-tool
+  348  sudo apk install mii-tool
+  349  sudo apk install miitool
+  350  clear
+  351  mii-tool
+  352  sudo mii-tool
+  353  sudo su
+  354  pwd
+  355  w
+  356  man info
+  357  man find
+  358  man find passwd
+  359  man passwd
+  360  man alias
+  361  alias -help
+  362  alias -h
+  363  info alias
+  364  man more
+  365  dir
+  366  vdir
+  367  dir -a
+  368  ls
+  369  ls -l
+  370  ls -a
+  371  ls -A
+  372  ls -d
+  373  clear
+  374  ls -recursive
+  375  man ls
+  376  ls -R
+  377  ls -R -t
+  378  ls -t
+  379  ls -vt
+  380  ls -lt
+  381  ls -lS
+  382  ls -lSR
+  383  man tree
+  384  tree /usr/etc
+  385  tree /usr/etc/
+  386  tree man
+  387  man tree
+  388  tree -P /usr/etc/
+  389  cd ..
+  390  cd .
+  391  cd /.
+  392  ls
+  393  cd home
+  394  history
+  395  ls
+  396  ls student/
+  397  ls student/Desktop/
+  398  ls student/Desktop/sieci/
+  399  history > student/Desktop/sieci/lab1/lab1.odt 
+  400  history > student/Desktop/sieci/lab1/lab1.txt

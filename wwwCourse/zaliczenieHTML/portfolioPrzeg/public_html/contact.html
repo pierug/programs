@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adam Piasecki</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/contact.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="./js/jquery.js"></script>
+        <script type="text/javascript" src="./js/slimbox2.js"></script>
+        <script type="text/javascript" src="./js/preloadImages.js"></script>
+
+        <script  type="text/javascript">
+            $(document).ready(function () {
+                var r = $("div");
+                r.css({"opacity": "0.0"});
+                r.animate({opacity: 0.0}, 1000);
+                r.animate({opacity: 0.95}, 1000);
+            });
+
+            function saveInLocalStorage() {
+                var textFieldVal = document.getElementById('content').value;
+                localStorage.setItem('Content', textFieldVal);
+                var subjectVal = document.getElementById('subject').value;
+                localStorage.setItem('Subject', subjectVal);
+                var emailVal = document.getElementById('email').value;
+                localStorage.setItem('Email', emailVal);
+
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="navigationBar"> 
+                <ul>
+                    <li><a href="index.html" id="aboutMe">ABOUT ME</a></li>
+                    <li><a href="CV.html" id="CV">CV</a></li>
+                    <li><a href="portfolio.html" id="portfolio">PORTFOLIO</a></li>
+                    <li><a href="contact.html" id="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="container">
+            <div id="text">
+                <h3>
+                    Contact
+                </h3>
+                If you have any questions, please complete a questionaire or write me an email at
+                <br>
+                <p>
+                    adam.piasecki@pollub.edu.pl 
+                </p>
+                <h3>
+                    Questionaire
+                </h3>
+                <form action="mailto:adam.piasecki@pollub.edu.pl" method="post">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>
+                                    Email 
+                                </td>
+                                <td>
+                                    <input id="email" class="txt" type="text" name="text" placeholder="name@domain.com" required/> <br />
+                                </td>											
+                            </tr>
+                            <tr>		
+                                <td>
+                                    Subject
+                                </td>
+                                <td>
+                                    <input id="subject" class="txt" type="text" name="text" placeholder="..." required/> <br />
+                                </td>						
+                            </tr>
+                            <tr>
+                                <td>
+                                    Content
+                                </td>
+                                <td>
+                                    <textarea id="content" class="txt" name="Text" placeholder="..." required></textarea> <br />
+                                </td>								
+                            </tr>
+                        </thead>
+                    </table>
+                    <input class="btn" type="submit" value="Send" onclick="saveInLocalStorage()"/>
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            2017 &copy; Adam Piasecki. All rights reserved.
+        </div>
+    </body>
+</html>

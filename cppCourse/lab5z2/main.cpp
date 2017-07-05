@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+class Zwierze{
+private:
+    string mImie;
+public:
+    Zwierze(string imie){
+        mImie = imie;
+    }
+    void setImie(string imie){
+        mImie = imie;
+    }
+    const string& naLancuch()const{
+        return mImie;
+    }
+};
+
+class Pies: public Zwierze{
+private:
+
+public:
+    Pies(string imie): Zwierze(imie){
+
+    }
+    void szczekaj(){
+        cout<<"HOW!!!"<<endl;
+    }
+    void dajLape(){
+        cout<<"DajeLape!!!"<<endl;
+    }
+};
+
+int main()
+{
+    Pies p("AZOR");
+    cout<<p.naLancuch()<<endl;
+    p.dajLape();
+    p.szczekaj();
+    return 0;
+}

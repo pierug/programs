@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formularze</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>
+            Formularz dotacji
+        </h1>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label>Format druku</label>
+
+            <select id="format" >
+                <option>A2</option>
+                <option>B2</option>
+                <option>A1</option>
+                <option>B1</option>
+                <option>A0</option>
+            </select >
+            <br/> 
+            <label>Papier wydruku</label>
+            Satymnowy 130g <input type="checkbox" name="130g" value="130g" />
+            190g <input type="checkbox" name="190g" value="190g" />
+            <br/> 
+            <input type="file" name="fileupload" id="fileupload" accept="image/*, .pdf"> 
+            <br/> 
+            <label>Kolor plakatu</label>
+            <input type="color" name="favcolor" value="#ff0000">
+            <br/> 
+            <input type="hidden" name="promo" value="promo" />
+            <input type="submit" formmethod="post">
+        </form>
+    </body>
+</html>
