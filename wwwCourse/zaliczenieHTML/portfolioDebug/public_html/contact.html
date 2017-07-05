@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adam Piasecki</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/contact.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/walidacja.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="text">
+                <h3>
+                    Contact
+                </h3>
+                If you have any questions, please complete a questionaire or write me an email at
+                <br>
+                <p>
+                    adam.piasecki@pollub.edu.pl 
+                </p>
+                <h3>
+                    Questionaire
+                </h3>
+                <form id="form1" action="mailto:adam.piasecki@pollub.edu.pl" method="post">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>
+                                    Email 
+                                </td>
+                                <td>
+                                    <input id="email" class="txt" type="text" name="text" placeholder="name@domain.com" /> <br />
+                                </td>											
+                            </tr>
+                            <tr>		
+                                <td>
+                                    Subject
+                                </td>
+                                <td>
+                                    <input id="subject" class="txt" type="text" name="text" placeholder="..." /> <br />
+                                </td>						
+                            </tr>
+                            <tr>
+                                <td>
+                                    Content
+                                </td>
+                                <td>
+                                    <textarea id="content" class="txt" name="Text" placeholder="..." ></textarea> <br />
+                                </td>								
+                            </tr>
+                        </thead>
+                    </table>
+                    <input class="btn" type="submit" value="Send" onclick="saveInLocalStorage()"/>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

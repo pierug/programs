@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-03-01, 12:35:14
+    Author     : student
+*/
+
+body{
+    margin: 0 auto;
+    width:70%;
+    height: 50%;
+}
+#baner{
+    margin:0;
+    padding:0;
+    background:#ff9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pasek{    
+    float:left;
+    width:30%;
+    height: 200px;
+    background:#ffcccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu{
+    float:right;
+    float:top;
+    width:70%;
+    height: 50px;
+    background:#ffff33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tresc{
+    float:right;
+    float: bottom;
+    width:70%;
+    height: 100px;
+    background:#ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#stopka{
+    float:left;
+    width:70%;
+    background:#ccffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

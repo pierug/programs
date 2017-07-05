@@ -1,0 +1,38 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-03-01, 10:48:59
+    Author     : student
+*/
+
+table {
+    background:#ffffb3;
+    text-align:center;
+    width:94%;
+    margin:2%;
+    border:1pt solid #000040;
+}
+/*ustawienie tytułu tabeli:*/
+caption {
+    font-size:150%
+}
+/*formatowanie części nagłowkowej i stopki tabeli: */
+tfoot, thead {
+    background:#0000a0;
+    color:#ffffff;
+    font-size:120%
+}
+/*formatowanie pojedynczych komórek zwykłych i nagłówkowych: */
+td, th {
+    border:1pt solid #000040;
+}
+/*formatowanie elementu <a> zawartego w elemencie <tfoot>: */
+tfoot a {
+    color:#ffffff;
+}
+*.parzysty {
+    background:#ffffff;
+}

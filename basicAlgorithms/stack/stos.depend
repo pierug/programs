@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1459594773 source:d:\informatyka 2 sem\aisdstr\stos\main.cpp
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+

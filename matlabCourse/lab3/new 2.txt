@@ -1,0 +1,1291 @@
+ <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="126dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="65dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Nadciśnienie?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Nadciśnienie"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Tak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yes1"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Nie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/no1"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Nie wiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dont1"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="65dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Choroba niedokrwienia serca?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/niedokrwienia"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Tak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yes2"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Nie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/no2"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Nie wiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dont2"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="65dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Zawał serca?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serca"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Tak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yes3"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Nie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/no3"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Nie wiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dont3"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="65dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:text="Wada serca?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Wadaserca"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Tak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yes4"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Nie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/no4"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Nie wiem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dont4"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Niewydolność krążenia?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Wadase3rca"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes5"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no5"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont5"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Stan po operacji serca?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Wad4aserca"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes6"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no6"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont6"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby nerek?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobynerek"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes7"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no7"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont7"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby reumatyczne?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyreumatyczne"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes8"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no8"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont8"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby oczu?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyoczu"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes9"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no9"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont9"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Zaburzenia hormonalne?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Zaburzeniahormonalne"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes10"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no10"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont10"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Cukrzyca?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Cukrzyca"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes11"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no11"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont11"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Padaczka?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Padaczka"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes12"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no12"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont12"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Udar mózgu?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Udar"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes13"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no13"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont13"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Zaburzenia krzepnięcia?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Zaburzenia"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes14"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no14"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont14"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="HBS pozytywny?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/HBSpozytywny"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes15"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no15"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont15"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="WZW typu B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/WZWtypuB"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes16"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no16"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont16"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="WZW typu C?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/WZWtypuC"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes17"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no17"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont17"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="HIV/AIDS?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/HIVAIDS"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes18"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no18"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont18"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby tarczycy?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobytarczycy"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes19"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no19"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont19"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Astma?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Astma"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes20"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no20"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont20"
+                    android:layout_weight="1" />
+            </RadioGroup>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="65dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Choroby skóry?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Chorobyry"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Tak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/yes21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no21"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="Nie wiem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dont21"
+                    android:layout_weight="1" />
+            </RadioGroup>
+            
+            
+
+    </LinearLayout>
+    </ScrollView>

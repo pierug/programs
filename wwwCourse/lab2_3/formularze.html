@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+        <link rel="stylesheet" href="CSS/formularze.css" type="text/css" />
+        <title> Formularze </title>
+    </head>
+
+    <body >
+        <div id="kontener">
+            <div id="baner"><h2>Szybki kurs HTML</h2></div>
+            <br/>
+            <div id="menu">
+                <ul id="nav">
+                    <li><a href="index.html">Podstawy</a></li>
+                    <li><a href="tabele.html">Tabele</a></li>
+                    <li><a href="">Formularze</a>
+                        <ul>
+                            <li><a href="formularze.html" >Pola formularza</a></li>
+                            <li><a href="obliczenia.html" >Obliczenia w formularzu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                </ul>
+            </div>
+
+            <div id="tresc"> 
+                <h2>Przykładowy formularz HTML</h2>
+            </div>
+            <div>
+                <form action="mailto:adam.piasecki@pollub.edu.pl" method="post" autocomplete="on">
+                    <!-- Przykładowe typy znacznika input -->
+                    <table border="1">
+                        <caption>Popularność języków programowania</caption>
+                        <thead>
+                            <tr>
+                                <th class="radioBtn">Nazwisko :</th>
+                                <th><input type="text" name="login"/> <br /></th>											
+                            </tr>
+                            <tr>		
+                                <th class="radioBtn">Wiek:</th>
+                                <th><input type="password" name="pass"/> <br /></th>							
+                            </tr>
+                            <tr>
+                                <th class="radioBtn">Państwo:</th>
+                                <th><select>
+                                        <option value="polska">Polska</option>
+                                        <option value="grecja">Grecja</option>
+                                    </select><br />
+                                </th>									
+                            </tr>
+                            <tr>		
+                                <th class="radioBtn">Adres e-mail:</th>
+                                <th><input type="text" name="text"/>
+                                </th>							
+                            </tr>
+                        </thead>
+
+                    </table>
+                    <h2>Zamawiam tutorial z języka:</h2> <br />
+                    <input type="checkbox" name="C" value="C" /> C/C++
+                    <input type="checkbox" name="Java" value="J" /> Java
+                    <input type="checkbox" name="PHP" value="PHP" /> PHP <br />
+                    <h2>Sposób zapłaty:</h2> <br />
+                    <input type="radio" name="eurocard" value="e" /> eurocard 
+                    <input type="radio" name="visa" value="v" /> visa 
+                    <input type="radio" name="przelew" value="p" /> przelew bankowy<br />
+                    <h2>Nowe:</h2> <br />
+                    Email 
+                    <input type="email" name="email" required="required"/> <br />
+                    Color
+                    <input type="color" name="col" value="#ffffff" /> <br /> 
+                    Data
+                    <input type="date" name="bday" required="required"/> <br />
+                    
+                    <input type="submit" value="Wyślij" />
+                    <input type="reset" value="Anuluj" />
+
+                </form>
+            </div>
+            <div id="stopka"> &copy;BP 2014</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{
+	\"Name\" : \"QtcCppunit\",
+	\"Version\" : \"0.1\",
+	\"CompatVersion\" : \"$$QTCREATOR_COMPAT_VERSION\",
+	\"Experimental\" : true,
+	\"Vendor\" : \"David Dibben\",
+	\"Copyright\" : \"(C) 2016 David Dibben\",
+	\"License\" :  \"MIT license\",
+	\"Category\" : \"C++\",
+	\"Description\" : \"CppUnit Helper plugin.\",
+	\"Url\" : \"https://github.com/dibben/qt-creator-cppunit-plugin\",
+	$$dependencyList
+}

@@ -1,0 +1,91 @@
+http://www.cyberciti.biz/faq/ubuntu-start-stop-iptables-service/
+
+Ubuntu: Stat / Stop / Restart Iptables Firewall Service
+by VIVEK GITE on NOVEMBER 11, 2013 last updated MAY 7, 2015
+in COMMANDS, IPTABLES, UBUNTU LINUX
+I am a new Ubuntu Linux version 12.04 LTS user. How do I stop or start iptables based firewall service on Ubuntu Linux using bash command line options?
+
+You can type the following commands start / stop firewall service on Ubuntu based server or desktop.
+
+ 
+a] ufw command – This command is used for managing a Linux firewall and aims to provide an easy to use interface for the user.
+
+b] iptables command – This command is used to set up, maintain, and inspect the tables of IPv4 packet filter rules in the Linux kernel.
+
+Find status of firewall
+
+Login as root user either by opening the Terminal or login over the ssh based session. Type the following command:
+$ sudo ufw status
+
+Sample outputs:
+
+Status: inactive
+Ubuntu stop iptables service command
+
+Type the following command to unloads firewall and disables firewall on boot:
+$ sudo ufw disable
+
+Ubuntu start iptables service command
+
+Type the following command to reloads firewall and enables firewall on boot:
+$ sudo ufw enable
+
+Ubuntu reload / restart iptables service command
+
+Type the following command to reloads firewall:
+$ sudo ufw reload
+
+Alternative method to enable/disable firewall on Ubuntu and other Linux distros
+
+If you are not using ufw command and/or ufw is not installed, try the following generic methods:
+
+Get IPv4 iptables status
+$ sudo iptables -L -n -v
+
+Get IPv6 ip6tables status
+$ sudo ip6tables -L -n -v
+
+Save IPv4 iptables firewall
+Use the iptables-save command to save current firewall rules:
+$ sudo iptables-save > $HOME/firewall.txt
+
+Save IPv6 ip6tables firewall
+$ sudo ip6tables-save > $HOME/firewall-6.txt
+
+Restore IPv4 iptables firewall
+Use the iptables-restore command to restore firewall rules:
+$ sudo iptables-restore < $HOME/firewall.txt
+
+Restore IPv6 ip6tables firewall
+$ sudo ip6tables-restore < $HOME/firewall-6.txt
+
+Putting it all together
+To stop Ipv4 based iptables firewall, enter:
+
+sudo iptables-save > $HOME/firewall.txt
+sudo iptables -X
+sudo iptables -t nat -F
+sudo iptables -t nat -X
+sudo iptables -t mangle -F
+sudo iptables -t mangle -X
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+To stop Ipv6 based iptables firewall, enter:
+
+sudo ip6tables-save > $HOME/firewall-6.txt
+sudo ip6tables -X
+sudo ip6tables -t mangle -F
+sudo ip6tables -t mangle -X
+sudo ip6tables -P INPUT ACCEPT
+sudo ip6tables -P FORWARD ACCEPT
+sudo ip6tables -P OUTPUT ACCEPT
+Where,
+
+-F : Flush the selected chain (all the chains in the table if none is given). This is equivalent to deleting all the rules one by one.
+-X : Delete the optional user-defined chain specified. There must be no references to the chain. If there are, you must delete or replace the referring rules before the chain can be deleted.
+-P chainNameHere ACCEPT : Set the policy for the chain to the given target.
+-L : List rules.
+-v : Verbose output.
+-n : Numeric output. IP addresses and port numbers will be printed in numeric format.
+ 
